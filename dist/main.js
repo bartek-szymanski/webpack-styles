@@ -78,7 +78,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const headline = 'Welcome to the webpage';
+const headline = 'Kwiziq';
 document.querySelector('h1').innerText = headline;
 
 

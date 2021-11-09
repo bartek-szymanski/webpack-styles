@@ -1,6 +1,7 @@
 $light-text: moccasin;
 
 :root {
+
     --mainBg: mediumpurple;
 }
 
@@ -9,13 +10,15 @@ body {
     color: $light-text;
 }
 
+
 .container {
+    margin: 0;
     padding: 1rem;
     display: flex;
     // background: linear-gradient(to top, var(--mainBg), $light-text);
     
     h1 {
-        font-size: 68px;
         text-align: center;
+        font-size: 68px;
     }
 }
