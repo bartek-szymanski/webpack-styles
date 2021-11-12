@@ -1,7 +1,18 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// const path = require('path');
+
+const webpack = require('webpack'); // to access built-in plugins 
+const HtmlWebpackPlugin = require('html-webpack-plugin'); // installed via npm. Easily create HTML files to serve your bundles
+
 
 module.exports = {
     mode: 'development',
+
+    // entry: './src/index.js', // entry point (single or multiple) that webpack is using to build its internal dependency graph 
+    // output: { // where to emit the bundles and how to name these files
+        // path: path.resolve(__dirname, 'dist'),
+        // filename: 'my-webpack.bundle.js',
+    // },
     
     module: {
 
@@ -71,7 +82,13 @@ module.exports = {
         ]
     },
 
-    plugins: [new MiniCssExtractPlugin()],
+    plugins: [
+        new MiniCssExtractPlugin(),
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+        }),
+
+    ],
 
     devtool: 'source-map',
 }
